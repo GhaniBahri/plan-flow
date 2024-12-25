@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       colors:{
         'brandiesBlue': '#2F70F2',
+      },
+      fontFamily: {
+        karantina: ["Karantina","serif"],
+        poppins: ["Poppins", "serif"]
       }
     },
   },
