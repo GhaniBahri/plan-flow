@@ -1,14 +1,15 @@
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import logo from './logo.svg';
 // import './App.css';
 
 function App() {
   return (
-    <main className="bg-green-500">
-      <header className="App-header bg-red-400">
-        
-      <Navbar/>
+    <main className="h-full">
+      <header className="App-header">
+        <Navbar/>
       </header>
+      <Hero/>
     </main>
   );
 }
