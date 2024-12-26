@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,  Routes, Route } from "react-router";
+import Auth from './pages/Auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,12 +12,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route index element={<App/>} />
-        <Route >
-          <Route index />
-          <Route />
-        </Route>
+        <Route path='/auth' element={<Auth/>} />
       </Routes>
-      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
