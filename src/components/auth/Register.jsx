@@ -11,20 +11,25 @@ function Register({switcher}) {
         setShowPass(!showPass)
       }
     const register = async (e) => {
-      console.log('before')
       e.preventDefault()
-      console.log('submiiing')
       const config = {
         url:'http://localhost:8000/register',
         method: 'post',
         data: {
-          fullName:'',
-          email:'',
-          password:''
+          fullName: data.fullName,
+          email: data.email,
+          password: data.password
         }
       }
-      const response = await axios.request(config)
-      console.log(response)
+      try{
+        const response = await axios.request(config)
+        console.log("res:", response)
+        
+        if (response.status === 200) setData({fullName:'', email:'', password:''})
+      } catch (error){
+        console.error(error)
+        if (error.status === 409) alert('email already used')
+      }
     }
   return (
     <form method='POST' className='w-full lg:w-1/3 flex flex-col justify-between items-center rounded-md bg-white overflow-hidden pb-10 z-10'>

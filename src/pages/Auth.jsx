@@ -6,7 +6,6 @@ import Forgot from '../components/auth/Forgot'
 function Auth() {
   const [tab, setTab] = useState('login')
   const switchTab = (selectedTab) =>{
-    console.log('tab', tab)
     setTab(selectedTab)
   }
   return (
