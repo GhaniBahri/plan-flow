@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,  Routes, Route } from "react-router";
 import Auth from './pages/Auth';
+import Dashboard from './pages/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route index element={<App/>} />
         <Route path='/auth' element={<Auth/>} />
+        <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
